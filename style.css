@@ -1,0 +1,181 @@
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the items if needed */
+}
+
+h5 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #000;
+    display: inline-block;
+    margin: 0; /* Remove default margin */
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #000;
+    display: inline-block;
+    margin: 0; /* Remove default margin */
+    font-style: italic;
+
+}
+
+.captext {
+    font-size: 1em;
+    font-weight: bold;
+    color: #000;
+    display: inline-block;
+    margin: 0; /* Adjust or remove margin as needed */
+    padding-top: 0.5em;
+}
+.name-head{
+    font-size: 8vw
+}
+
+.up-Image {
+    width : 200px; /* Set the width of the image */
+    height : 200px; /* Set the height of the image */
+    position: relative; /* Declared position allows for location changes */
+    top: -300px; /* Moves the image 2px closer to the top of the page */
+}
+.padded-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+}
+li{
+    font-size: 20px;
+}
+.subheading {
+    font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem;
+    font-style: italic;
+  }
+.mb-3 {
+    margin-bottom: 1rem !important;
+  }
+.mb-5 {
+    margin-bottom: 3rem !important;
+    
+}
+section.resume-section {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    max-width: 75rem;
+  }
+  section.resume-section .resume-section-content {
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    section.resume-section {
+      min-height: 100vh;
+    }
+  }
+  @media (min-width: 992px) {
+    section.resume-section {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+  
+  #sideNav {
+    width: 250px; /* Width of the sidebar */
+    position: fixed; /* Fixed position */
+    top: 60; /* Start from the top of the page */
+    left: 0; /* Align to the left side of the page */
+    height: 100%; /* Full height */
+    z-index: 1030; /* Make sure it's on top of other elements */
+    background-color: #6c757d; /* Sidebar background color */
+    overflow-x: hidden; /* Hide horizontal scroll */
+    padding-top: 20px; /* Add some padding on top */
+}
+
+#sideNav .navbar-nav {
+    flex-direction: column; /* Stack nav items vertically */
+}
+
+#sideNav .nav-item {
+    width: 100%; /* Full width nav items */
+}
+
+#sideNav .nav-link {
+    padding: 10px 15px; /* Larger click areas */
+}
+
+#sideNav .navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sideNav .img-profile {
+    max-width: 120px; /* Adjust profile image size */
+    border-radius: 50%; /* Circular image */
+}
+
+@media (min-width: 992px) {
+    #sideNav {
+        display: block;
+    }
+}
+
+/* Adjust the main content area */
+.container-fluid {
+    margin-left: 250px; /* Add margin to account for the sidebar */
+}
+
+@media (max-width: 991px) {
+    #sideNav {
+        display: none; /* Hide sidebar on smaller screens */
+    }
+
+    .container-fluid {
+        margin-left: 0; /* Remove margin from the main content area */
+    }
+}
+
+.nav-size{
+    font-size: 20px;
+}
+.nav-left-color{
+    background-color: #b9bfc2c1;
+}
+.dev-icons {
+    font-size: 3rem;
+  }
+  .fabsize li {
+    font-size: 1.25em; /* This sets the font size larger than the default */
+}
+
+/* This ensures that the icons do not scale up with the text */
+.fabsize .fa-li .fas {
+    font-size: inherit; /* This will force the icons to inherit the font size of the ul, not the li */
+}
+
+.button-center{
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+}
+.p-title{
+    font-size: 30px;
+    font-weight: bold;
+}
+.italicsmb{
+    font-style: italic;
+}
