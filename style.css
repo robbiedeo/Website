@@ -6,7 +6,7 @@
 }
 
 h5 {
-    font-size: 2em;
+    font-size: 3em;
     font-weight: bold;
     color: #000;
     display: inline-block;
@@ -21,6 +21,10 @@ h2 {
     margin: 0; /* Remove default margin */
     font-style: italic;
 
+}
+
+.res{
+    background-color: #38393a;
 }
 .up-Image {
     transition: transform 0.2s ease-in-out; /* Smooth transition using Bootstrap's timing */
@@ -43,10 +47,8 @@ h2 {
 }
 
 .up-Image {
-    width : 200px; /* Set the width of the image */
-    height : 200px; /* Set the height of the image */
-    position: relative; /* Declared position allows for location changes */
-    top: -300px; /* Moves the image 2px closer to the top of the page */
+    width : 100px; /* Set the width of the image */
+    height : 100px; /* Set the height of the image */
 }
 .padded-bottom{
     display: flex;
@@ -73,6 +75,37 @@ li{
     margin-bottom: 3rem !important;
     
 }
+@media (max-width: 767px) {
+    .container-fluid, .row, .col-md-6, .carousel-inner, .carousel-item, .carousel-img {
+        width: 100vw; /* Ensures the width is 100% of the viewport width */
+        max-width: 100%; /* Ensures that the width does not exceed 100% of the parent */
+        overflow-x: hidden; /* Hides horizontal overflow */
+    }
+
+    .carousel-item img {
+        height: auto; /* Keeps the image's aspect ratio */
+        max-width: 100%; /* Ensures the image is fully contained within its element */
+    }
+
+    .up-Image {
+        width: 50px; /* Adjust the size of the images if they're too big */
+        height: 50px; /* Adjust the size of the images if they're too big */
+        margin: 0 auto; /* Center the images */
+        display: block; /* Change display to block for the images */
+    }
+
+    h1, h5, .captext {
+        text-align: center; /* Centers text */
+        font-size: 4vw; /* Adjusts font size based on the width of the screen */
+    }
+
+    .text-container, .padded-bottom, .button-center {
+        justify-content: center; /* Center the flex items */
+    }
+
+    /* Other elements you may want to adjust */
+}
+
 section.resume-section {
     display: flex;
     align-items: center;
@@ -107,7 +140,6 @@ section.resume-section {
     left: 0; /* Align to the left side of the page */
     height: 100%; /* Full height */
    
-    background-color: #6c757d; /* Sidebar background color */
     overflow-x: hidden; /* Hide horizontal scroll */
     padding-top: 20px; /* Add some padding on top */
 }
@@ -142,20 +174,37 @@ section.resume-section {
 }
 
 /* Adjust the main content area */
-.container-fluid {
+.container-fluidR {
     margin-left: 250px; /* Add margin to account for the sidebar */
 }
+
 
 @media (max-width: 991px) {
     #sideNav {
         display: none; /* Hide sidebar on smaller screens */
     }
+    .navbar.sticky-top {
+        position: static; /* This will make it scroll with the page */
+    }
 
-    .container-fluid {
+    .container-fluidR {
         margin-left: 0; /* Remove margin from the main content area */
     }
 }
+/* Add a media query for large screens */
+@media (min-width: 1200px) {
+    /* Styles for larger screens */
+    .row {
+        display: flex;
+        justify-content: space-between; /* This will keep your text and image on the same row with space between them */
+        align-items: center; /* This will vertically center align the items */
+    }
 
+    .text-block-large {
+        width: 50%; /* Adjust as necessary */
+    }
+
+}
 .nav-size{
     font-size: 20px;
 }
@@ -191,4 +240,93 @@ section.resume-section {
     color: #c8d9f9; /* Change to your preferred highlight color */
     font-weight: bold; /* Optional: makes the text bold */
     text-decoration: underline; /* Optional: underlines the text */
+}
+
+body {
+    background: linear-gradient(to right, #f8f9f9, #d3dee3, #abc2d5); /* Replace with your actual color codes */
+}
+
+h1 {
+    font-size: 80px;
+}
+/* This applies styles when the viewport width is greater than 1200px */
+
+/*
+@media screen and (min-width: 1200px) {
+    body, html {
+        overflow: hidden; /* This will prevent scrolling 
+        max-height: 100vh; /* This sets the maximum height to the view height of the screen 
+    }
+}
+*/
+
+
+/* Change navbar text color to black */
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: black !important;
+}
+
+/* Change navbar text color to black when hovering */
+.navbar-nav .nav-link:hover {
+    color: #505050 !important; /* This is a dark gray, adjust as needed */
+}
+
+/* Style for the anchor tags */
+a.px-2 {
+    display: inline-flex; /* Align the anchor properly */
+    transition: transform 0.3s ease; /* Smooth transition for the transform */
+  }
+  
+  /* Style for hover state */
+  a.px-2:hover {
+    transform: scale(1.1); /* Scale up the icon to 110% of its original size */
+  }
+
+/* Set the maximum height for the specific image */
+.cat-image {
+    max-height: 80vh; /* Adjust this value as needed */
+    object-fit: contain; /* This will make sure the image is fully visible within the given height */
+}
+
+.map
+{
+    height: 300px;
+}
+.card-img-top {
+    width: 100%; /* Full width of the parent */
+    height: 500px; /* Height is set to auto to maintain the aspect ratio */
+    object-fit: cover; /* This will cover the area without stretching the image */
+    object-position: center; /* This will center the image within the element */
+  }
+  
+.aboutimg
+{
+    width: 300px;
+    height: 400px;
+    object-fit: cover; /* Cover the container without stretching the image */
+    object-position: center; /* Center the image within the container */
+
+}
+.carousel-item img {
+    width: 100%;
+    height: 400px; /* Adjust based on your carousel's height */
+    object-fit: cover; /* This will cover the area, possibly cropping the image */
+}
+
+
+
+/* Add a media query for large screens */
+@media (min-width: 1200px) {
+    /* Styles for larger screens */
+    .row {
+        display: flex;
+        justify-content: space-between; /* This will keep your text and image on the same row with space between them */
+        align-items: center; /* This will vertically center align the items */
+    }
+
+    .text-block-large {
+        width: 50%; /* Adjust as necessary */
+    }
+
 }
